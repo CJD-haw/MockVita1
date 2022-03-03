@@ -1,0 +1,17 @@
+Palindromic Count
+
+Problem Description
+Given a string Str, and a set of numbers (S) which determine the length of palindromic substrings contained within Str, find out the count of all such palindromes.
+
+Constraints
+0 < N <= 10 ^ 4
+0 < M <= 10 ^ 4
+
+Input
+First line contains an integer N which is length of string
+Second line contains a string of length N containing all lowercase characters
+Third line contains an integer M which is the number of elements in set S
+Fourth line contains M space separated integers which correspond to lengths of palindromic substrings that must be found within Str
+
+Output
+Count of all palindromic substrings which are of lengths corresponding to number in set S
