@@ -1,0 +1,113 @@
+Clever Traveler
+
+Problem Description
+You are given the data of travel schedule (of M days) of a traveler and prices of travel passes provided by N different companies. There is no restriction on the number of times one can buy the passes. However the objective is to buy optimal number such that the traveling cost is minimized. You can buy passes from different companies for different days.
+The passes can be single day or multi-day pass. In case of multi-day pass the pass is valid for those many travels on consecutive days only. For e.g. a 10-day pass can be used to travel 10 times from Day 1 to Day 10. The pass expires at the end of 10th day. Hence it can not be used for any further travel. Similarly a i day pass expires at the end of ith day from the day of issue.
+For better understanding refer to Examples section.
+
+Constraints
+0 < N <= 5
+0 < M < 10 ^ 5
+
+Input
+First line contains five space separated integers in ascending order denoting the number of days of validity for that pass
+Second line contains an integer N which denotes number of travel companies that provide passes
+Next N lines contain five space separated integers which denotes the price of the ith pass offered by nth travel company where 1 <= n <= N
+Next line contains an integer M which denotes the number of days the traveler has to travel
+Next line contains M space separated integers. Each number denotes the day number that the traveler has to travel on
+
+Output
+Minimum cost of travel for given travel schedule factoring in pass cost offered by different companies.
+
+Example 1
+Input
+1 3 5 7 9
+2
+1 3 5 5 7
+1 3 4 6 8
+12
+1 2 3 4 5 6 7 8 9 10 11 15
+
+Output
+10
+
+Explanation
+The input format conveys the following information
+First three lines convey the following.
+Pass Cost
+1-day
+3-day
+5-day
+7-day
+9-day
+Company 1
+1
+3
+5
+5
+7
+Company 2
+1
+3
+4
+6
+8
+Fourth line conveys that the traveler has to travel for 12 days.
+Fifth line conveys on what days does he need to travel.
+Note that the traveler needs to travel on 11 consecutive days, while the 12th travel is a few days apart.
+So if the traveler purchases a 7-day pass from company 1 and and a 5-day pass from company 2, then at the end of twelve days he will have traveled 11 times at a cost of 9 (5 + 4).
+Further the traveler can purchase a 1-day pass from either company since cost is the same. Thus the overall minimum travel cost is 10 (9 + 1). Hence output is 10.
+
+Example 2
+
+Input
+1 5 10 15 30
+3
+1 4 9 11 22
+1 4 8 12 26
+2 8 13 17 37
+30
+1 2 3 4 5 6 7 8 9 10 22 23 24 25 26 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+
+Output
+23
+
+Explanation
+The input format conveys the following information
+First three lines convey the following.
+Pass cost
+1-day
+5-day
+10-day
+15-day
+30-day
+Company 1
+1
+4
+9
+11
+22
+Company 2
+1
+4
+8
+12
+26
+Company 3
+2
+8
+13
+17
+37
+
+Fourth line conveys that the traveler has to travel for 30 days.
+Fifth line conveys on what days does he need to travel.
+
+Note that:
+There is 10 days of consecutive travel from Day 1 to Day 10.
+There is 5 days of consecutive travel from Day 22 to Day 26.
+There is 15 days of consecutive travel from Day 33 to Day 47.
+For first 10 days of consecutive travel, buying 5-day pass twice from company 1 or company 2 is actually cheaper than buying a 10-day pass from either of them. The minimum cost here will be 8 (4 * 2).
+The cheapest cost for the next consecutive 5-day travel is 4. Hence by Day 26, fifteen travel days can be completed at a cost of 12 (8 + 4).
+It is cheapest to buy 15-day pass from company 1 for consecutive travel from Day 33 to Day 47 at a cost of 11.
+Hence the overall minimum travel cost is 23 (12 + 11). So the output is 23.
