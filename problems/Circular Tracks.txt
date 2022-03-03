@@ -1,0 +1,27 @@
+Circular Tracks
+
+Problem Description
+There are two circular tracks (C1 and C2) on which two motorcyclists (m1 and m2) are moving with two different speeds (s1, s2 m/s) (+ve for clockwise movement and -ve for anti-clockwise movement)
+The radius of the tracks are r1 and r2 meters and d is the distance between their centers.
+Your job is to compute if they will crash in given time t seconds, if m1 starts from E and m2 starts from F, where t is the time after which motorcycles will stop.
+If yes, then find the time of the first crash and the collision point viz. {E, F}. If E and F coincide with each other, then consider first crash after 0 seconds.
+For safety sake, if m1 and m2 reach the same point viz. {E, F} in the same second but a few milliseconds apart consider that as a crash. For example, if m1 crosses E at 5.66666231 second and m2 crosses E at 5.89544578 second, consider that both crash at the 5th second.
+If there is no crash print 'no crash'.
+
+Constraints
+All the inputs are integers
+Assume pi=3.141592653589793
+
+Input
+First line contains an integer r1, which represents radius of circular track C1 in meters
+Second line contains an integer r2, which represents radius of circular track C2 in meters
+Third line contains an integer s1, which represents the speed of m1 in m/s
+Fourth line contains an integer s2, which represents the speed of m2 in m/s
+Fifth line contains an integer t, which represents time in seconds after which the motorcycles will stop
+Sixth line contains an integer d, which represents distance between the centers of circles C1 and C2
+
+Output
+One line containing the second at which the crash occurs along with the point at which the crash happens i.e. E or F, in the format,
+<second of crash> <space> <E/F>. If crash happens at either E or F. For example, if the motorcycles crash at 10th second at point E, then print "10 E".
+If the points E and F are coinciding then print "<second of crash> <space> <E&F>" (Refer Example 2).
+If no crash happens then print "no crash".
