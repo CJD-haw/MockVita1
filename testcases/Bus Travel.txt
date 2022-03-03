@@ -1,0 +1,83 @@
+Test Case I:
+Input
+5
+X Y | -
+Z | -
+- | Z
+- | X
+- | Y
+3
+1 2
+2 5
+2 3
+Output
+X 1 2 OT
+Y 2 5 OT
+Z 2 3 UT
+Test Case II
+Input
+10
+A B C D | -
+E F G | A
+H I J K L M | E F
+- | C D
+N O P Q R | H I J
+S T U V W | -
+- | B G K L M
+X Y Z | N O
+- | P Q R S T
+- | U V M X Y Z
+26
+1 2
+1 10
+1 4
+1 4
+2 3
+2 3
+2 3
+3 5
+3 5
+3 5
+3 7
+3 7
+3 7
+5 8
+5 8
+5 9
+5 9
+5 9
+6 9
+6 9
+6 10
+6 10
+6 10
+7 10
+7 10
+7 10
+Output
+A 1 2 UT
+B 1 10 OT
+C 1 4 UT
+D 1 4 UT
+E 2 3 UT
+F 2 3 UT
+G 2 3 OT
+H 3 5 UT
+I 3 5 UT
+J 3 5 UT
+K 3 7 UT
+L 3 7 UT
+M 3 7 UT
+N 5 8 OT
+O 5 8 UT
+P 5 9 OT
+Q 5 9 UT
+R 5 9 UT
+S 6 9 UT
+T 6 9 UT
+U 6 10 OT
+V 6 10 UT
+W 6 10 UT
+X 7 10 OT
+Y 7 10 OT
+Z 7 10 OT
